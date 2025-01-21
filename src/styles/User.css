@@ -1,0 +1,58 @@
+.user-row {
+  display: flex;
+  padding: 10px;
+  border: 2px solid #000;
+  border-top: 1px;
+  background-color: #edf2fa;
+}
+
+.name,
+.email,
+.role {
+  flex: 0 0 30%;
+  font-weight: 600;
+  border: none;
+  padding: 15px 5px 0;
+  background-color: #edf2fa;
+  word-wrap: break-word;
+  resize: none;
+  font-size: 16px;
+}
+
+.selected {
+  background-color: lightgrey;
+}
+
+.role {
+  text-transform: capitalize;
+}
+
+.icons {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  margin: auto;
+}
+
+.icons i {
+  cursor: pointer;
+}
+
+.save {
+  font-weight: 600;
+  background-color: #fff;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+@media screen and (max-width: 768px) {
+  .name,
+  .email,
+  .role {
+    flex: 1;
+    width: 100%;
+    height: 50px;
+    padding-top: 30px;
+    font-size: 14px;
+  }
+}

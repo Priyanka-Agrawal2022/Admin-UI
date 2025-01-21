@@ -1,0 +1,28 @@
+#header {
+  display: flex;
+  padding: 10px;
+  border: 2px solid #000;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+}
+
+#header {
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.field {
+  flex: 0 0 30%;
+  border: none;
+  padding: 5px;
+}
+
+.actions {
+  margin: auto;
+}
+
+@media screen and (max-width: 768px) {
+  .field {
+    flex: 1;
+  }
+}
