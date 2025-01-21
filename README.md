@@ -1,70 +1,61 @@
-# Getting Started with Create React App
+# Admin UI
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+A Geektrust Frontend coding challenge solved using React.js library. All core features are implemented without using any third-party library.
 
-## Available Scripts
+## [Live Demo](https://priyanka-agrawal2022.github.io/Admin-UI)
 
-In the project directory, you can run:
+## Features
 
-### `npm start`
+- Displays an interface for admins to see and delete users.
+- There is a search bar that can filter on any property.
+- Able to edit or delete rows in place.
+- Implemented pagination i.e. each page contains 10 rows.
+- Buttons at the bottom allow jumping to any page including special buttons for first page, previous page, next page and last page.
+- Pagination updates based on search/filtering.
+- Able to select one or more rows. A selected row is highlighted with a grayish background color.
+- Multiple selected rows can be deleted at once using the 'Delete Selected' button at the bottom left.
+- Checkbox on the top left is a shortcut to select or deselect all displayed rows. This applies only to the ten rows displayed in the current page, and not all 50 rows.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+### Users API
+API to list all the users and their properties.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+### Note :
+The users are sorted by `id` field. There is no alphabetical sorting.
 
-### `npm test`
+### Request Type :
+GET
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+### Endpoint :
+https://geektrust.s3-ap-southeast-1.amazonaws.com/adminui-problem/members.json
 
-### `npm run build`
+### Sample Response :
+[
+  {
+    "id": "1",
+    "name": "Aaron Miles",
+    "email": "aaron@mailinator.com",
+    "role": "member"
+  },
+  {
+    "id": "2",
+    "name": "Aishwarya Naik",
+    "email": "aishwarya@mailinator.com",
+    "role": "member"
+  },
+  {
+    "id": "3",
+    "name": "Arvind Kumar",
+    "email": "arvind@mailinator.com",
+    "role": "admin"
+  }
+]
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+### Tech Stack
+- React.js, React Hooks, JSX, HTML, CSS, JavaScript
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+### How to Install Project
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+- Clone the project onto your local machine.
+- Run 'npm install' to install required dependencies.
+- Run 'npm start' in terminal to start server.
+- Open [http://localhost:3000/Admin-UI](http://localhost:3000/Admin-UI) to view it in your browser.
