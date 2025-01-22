@@ -9,7 +9,7 @@ A Geektrust Frontend coding challenge solved using React.js library. All core fe
 - Displays an interface for admins to see and delete users.
 - There is a search bar that can filter on any property.
 - Able to edit or delete rows in place.
-- Implemented pagination i.e. each page contains 10 rows.
+- Implemented pagination with each page containing 10 rows.
 - Buttons at the bottom allow jumping to any page including special buttons for first page, previous page, next page and last page.
 - Pagination updates based on search/filtering.
 - Able to select one or more rows. A selected row is highlighted with a grayish background color.
