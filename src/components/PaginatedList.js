@@ -1,8 +1,19 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import "../styles/PaginatedList.css";
 
 export const PaginatedList = (props) => {
-  const { Component, data, itemsPerPage, selectedRows, setSelectedRows, isMasterSelected, setIsMasterSelected, clearSelection, deleteSelected, ...rest } = props;
+  const {
+    Component,
+    data,
+    itemsPerPage,
+    selectedRows,
+    setSelectedRows,
+    isMasterSelected,
+    setIsMasterSelected,
+    clearSelection,
+    deleteSelected,
+    ...rest
+  } = props;
 
   const [currentPage, setCurrentPage] = useState(1);
 
@@ -10,6 +21,12 @@ export const PaginatedList = (props) => {
   const startIndex = (currentPage - 1) * itemsPerPage;
   const endIndex = currentPage * itemsPerPage;
   const currentPageData = data.slice(startIndex, endIndex);
+
+  useEffect(() => {
+    if (currentPage > totalPages && totalPages > 0) {
+      setCurrentPage(totalPages);
+    }
+  }, [data, totalPages, currentPage]);
 
   const gotoPage = (page) => {
     if (page >= 1 && page <= totalPages) {
@@ -57,7 +74,13 @@ export const PaginatedList = (props) => {
       />
 
       <div className="bottom-container">
-        <button className="delete" disabled={selectedRows.size === 0} onClick={deleteSelected}>Delete Selected</button>
+        <button
+          className="delete"
+          disabled={selectedRows.size === 0}
+          onClick={deleteSelected}
+        >
+          Delete Selected
+        </button>
 
         <div className="pagination-controls">
           <button
