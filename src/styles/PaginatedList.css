@@ -8,11 +8,16 @@
 
 .bottom-container .delete {
   color: #fff;
-  background-color: palevioletred;
-  border: 2px solid lightgrey;
+  font-weight: 600;
+  background-color: #000;
+  border: 2px solid #000;
   border-radius: 5px;
   padding: 10px;
   cursor: pointer;
+}
+
+.delete:hover {
+  transform: scale(1.1);
 }
 
 .pagination-controls {
@@ -25,14 +30,33 @@
   gap: 10px;
 }
 
+.prev:hover {
+  transform: scale(1.1);
+  background-color: #000;
+  color: #fff;
+}
+
+.next:hover {
+  transform: scale(1.1);
+  background-color: #000;
+  color: #fff;
+}
+
 .page-numbers {
   display: flex;
   gap: 10px;
   align-items: center;
 }
 
+.page-numbers button:hover {
+  transform: scale(1.1);
+  background-color: #000;
+  color: #fff;
+}
+
 .page-numbers .active {
-  background-color: lightgrey;
+  background-color: #000;
+  color: #fff;
 }
 
 .pagination-controls button {

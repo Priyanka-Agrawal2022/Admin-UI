@@ -12,7 +12,8 @@
   flex: 0 0 30%;
   font-weight: 600;
   border: none;
-  padding: 15px 5px 0;
+  padding: 0 5px;
+  height: 20px;
   background-color: #edf2fa;
   word-wrap: break-word;
   resize: none;
